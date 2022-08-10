@@ -1,0 +1,23 @@
+@use "variables";
+
+@mixin card-configuration-letter(
+  $Font-size: unset,
+  $Color: unset,
+  $Font-weight: unset
+) {
+  font-size: $Font-size;
+  color: $Color;
+  font-weight: $Font-weight;
+}
+
+@mixin stats-configuration-letter(
+  $Color: unset,
+  $Letter-spacing: unset,
+  $Font-size: unset,
+  $Font-weight: unset
+) {
+  color: $Color;
+  letter-spacing: $Letter-spacing;
+  font-size: $Font-size;
+  font-weight: $Font-weight;
+}

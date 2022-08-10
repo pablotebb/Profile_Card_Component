@@ -1,0 +1,176 @@
+@use "init";
+@use "variables";
+@use "mixins";
+
+.card-container {
+  position: relative;
+  margin: 147px auto;
+  // border: 1px solid red;
+  border-radius: 20px;
+  width: 329px;
+  height: 376px;
+  overflow: hidden;
+  &__bubbles {
+    background: url(../images/bg-pattern-card.svg);
+    height: 143px;
+  }
+  &__picture {
+    position: absolute;
+    top: 93px;
+    right: 35%;
+    height: 102px;
+    width: 105px;
+    border: 5px solid variables.$White;
+    border-radius: 50%;
+  }
+  &__data {
+    padding-top: 29px;
+    background-color: variables.$White;
+    height: 147px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      // border: 1px solid red;
+      width: 139px;
+    }
+    &--black {
+      @include mixins.card-configuration-letter(
+        // font-size
+        1.05em,
+        // color
+        variables.$Very-dark-desaturated-blue,
+        // font-weight
+        700
+      );
+    }
+    &--gray-1 {
+      @include mixins.card-configuration-letter(
+        // font-size
+        0.99em,
+        // color
+        variables.$Dark-gray,
+        // font-weight
+        700
+      );
+    }
+    &--gray-2 {
+      @include mixins.card-configuration-letter(
+        // font-size
+        0.811em,
+        // color
+        variables.$Dark-gray,
+        // font-weight
+        0.2
+      );
+      padding-top: 10px;
+    }
+  }
+  .card-container-stats {
+    border-top: 0.1px solid variables.$Dark-gray;
+    background-color: variables.$White;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    height: 89px;
+    justify-content: space-around;
+    line-height: 24px;
+    &__1 {
+      &--black {
+        @include mixins.stats-configuration-letter(
+          // color
+          variables.$Very-dark-desaturated-blue,
+          // letter-spacing
+          unset,
+          // font-size
+          unset,
+          // font-weight
+          700
+        );
+      }
+      &--grey {
+        @include mixins.stats-configuration-letter(
+          // color
+          variables.$Dark-gray,
+          // letter-spacing
+          2px,
+          // font-size
+          11px,
+          // font-weight
+          0.2
+        );
+      }
+    }
+    &__2 {
+      &--black {
+        @include mixins.stats-configuration-letter(
+          // color
+          variables.$Very-dark-desaturated-blue,
+          // letter-spacing
+          unset,
+          // font-size
+          unset,
+          // font-weight
+          700
+        );
+      }
+      &--grey {
+        @include mixins.stats-configuration-letter(
+          // color
+          variables.$Dark-gray,
+          // letter-spacing
+          2px,
+          // font-size
+          11px,
+          // font-weight
+          0.2
+        );
+      }
+    }
+    &__3 {
+      &--black {
+        @include mixins.stats-configuration-letter(
+          // color
+          variables.$Very-dark-desaturated-blue,
+          // letter-spacing
+          unset,
+          // font-size
+          unset,
+          // font-weight
+          700
+        );
+      }
+      &--grey {
+        @include mixins.stats-configuration-letter(
+          // color
+          variables.$Dark-gray,
+          // letter-spacing
+          2px,
+          // font-size
+          11px,
+          // font-weight
+          0.2
+        );
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .card-container {
+    width: 354px;
+  }
+}
+
+.attribution {
+  font-size: 18px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
